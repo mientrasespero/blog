@@ -1,0 +1,86 @@
+body {
+    background-image: url('https://res.cloudinary.com/dkocd2ekc/image/upload/v1757012409/bg_blog_bvoxt3.png'); /* Nueva URL externa */
+    background-size: calc(100vw * 2.5);
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body, a, button {
+    cursor: none !important;
+}
+
+#custom-cursor {
+    /* Usa tu GIF animado como fondo */
+    background-image: url('https://res.cloudinary.com/dkocd2ekc/image/upload/v1757018074/cursor_2_chiquito_ktuyqk.gif');
+    
+    /* Ajusta el tamaño a como quieres que se vea el cursor */
+    width: 64px;
+    height: 64px;
+    
+    /* Asegúrate de que el div no afecte el layout de la página */
+    position: fixed;
+    
+    /* Posición inicial, se actualizará con JS */
+    top: 0;
+    left: 0;
+    
+    /* ¡La propiedad más importante! Asegura que el mouse ignore este div */
+    pointer-events: none;
+    
+    /* Asegúrate de que el cursor esté por encima de TODO lo demás */
+    z-index: 9999;
+    
+    /* Esto fuerza al navegador a renderizar la animación del GIF */
+    background-repeat: no-repeat;
+}
+
+.container {
+    /* Ocupa toda la altura de la ventana */
+    height: 100vh;
+    /* Activa Flexbox */
+    display: flex;
+    /* Centra horizontalmente */
+    justify-content: center;
+    /* Centra verticalmente */
+    align-items: center;
+}
+
+/* Estilos para la caja de mensaje (esto va dentro de tu .container) */
+.message-box {
+    /* Diseño de la caja */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+    border: 2px solid white; /* Borde blanco */
+    border-radius: 15px; /* Esquinas ligeramente redondeadas */
+    padding: 1rem; /* Espacio interno generoso */
+    text-align: center; /* Centra el texto */
+    max-width: 300px; /* Ancho máximo para que no se vea muy extendido en pantallas grandes */
+    backdrop-filter: blur(5px); /* Efecto de vidrio esmerilado (opcional, muy moderno) */
+}
+
+/* Estilo para el mensaje principal */
+.main-message {
+    color: white; /* Color del texto */
+    font-family: 'Georgia', serif; /* Fuente serif para un look más literario */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
+    margin-bottom: 1.5rem; /* Espacio debajo de este párrafo */
+}
+
+/* Estilo para el mensaje de construcción */
+.construction-message {
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-style: italic; /* Texto en cursiva */
+    font-size: 1.1rem;
+    margin-bottom: 0rem; /* Espacio debajo antes del GIF */
+}
+
+/* Estilo para el GIF de construcción */
+.construction-gif {
+    width: 80px; /* Ajusta este tamaño según tu GIF */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Para poder centrarlo con margen */
+    margin: 0 auto; /* Centra el GIF horizontalmente */
+}
+
